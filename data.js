@@ -1,0 +1,87 @@
+window.INDICATORS = [
+  {
+    "id": "IND-01",
+    "name": "Receita Líquida",
+    "lever": "Crescimento de Receita",
+    "formula": "Soma do faturamento líquido de impostos e devoluções, apurada mensalmente e acumulada no período do ciclo.",
+    "target": 550.5,
+    "actual": 512.3,
+    "status": "Amarelo",
+    "window": "Fechada",
+    "owner": "Diretoria Comercial",
+    "recommendation": "Acelerar iniciativas comerciais do eixo B2C no último trimestre.",
+    "updated": "2026-09-28",
+    "valueType": "number"
+  },
+  {
+    "id": "IND-02",
+    "name": "EBITDA Ajustado",
+    "lever": "Rentabilidade",
+    "formula": "Lucro antes de juros, impostos, depreciação e amortização, ajustado por itens não recorrentes, apurado sobre o resultado consolidado do período.",
+    "target": 111,
+    "actual": 104.6,
+    "status": "Amarelo",
+    "window": "Fechada",
+    "owner": "Diretoria Financeira",
+    "recommendation": "Revisar eficiência operacional das unidades com maior desvio.",
+    "updated": "2026-09-28",
+    "valueType": "number"
+  },
+  {
+    "id": "IND-03",
+    "name": "Conversão de Caixa (FCO/EBITDA)",
+    "lever": "Geração de Caixa",
+    "formula": "Fluxo de Caixa Operacional dividido pelo EBITDA Ajustado do mesmo período, expresso em percentual.",
+    "target": 0.6,
+    "actual": 0.57,
+    "status": "Verde",
+    "window": "Fechada",
+    "owner": "Diretoria Financeira",
+    "recommendation": "— (dentro da tolerância)",
+    "updated": "2026-09-28",
+    "valueType": "percent"
+  },
+  {
+    "id": "IND-04",
+    "name": "% Franqueados Ativos",
+    "lever": "Eficiência Comercial",
+    "formula": "Número de franqueados com operação ativa e dentro dos critérios definidos, dividido pelo total de franqueados da base, expresso em percentual.",
+    "target": 0.85,
+    "actual": 0.79,
+    "status": "Amarelo",
+    "window": "Aberta",
+    "owner": "Diretoria de Franquias",
+    "recommendation": "Revisar critério de distribuição automática de leads por score.",
+    "updated": "2026-09-27",
+    "valueType": "percent"
+  },
+  {
+    "id": "IND-05",
+    "name": "Índice de Qualidade de Venda (IQV)",
+    "lever": "Experiência do Cliente",
+    "formula": "Pontuação ponderada apurada por auditoria amostral das vendas realizadas no período, em escala de 0 a 100 pontos.",
+    "target": 90,
+    "actual": 92,
+    "status": "Verde",
+    "window": "Fechada",
+    "owner": "Diretoria Comercial",
+    "recommendation": "— (dentro da tolerância)",
+    "updated": "2026-09-26",
+    "valueType": "points"
+  },
+  {
+    "id": "IND-06",
+    "name": "NPS Pós-venda",
+    "lever": "Experiência do Cliente",
+    "formula": "Percentual de clientes promotores menos percentual de clientes detratores, apurado em pesquisa enviada após o atendimento.",
+    "target": 70,
+    "actual": 61,
+    "status": "Vermelho",
+    "window": "Aberta",
+    "owner": "Diretoria de Relacionamento",
+    "recommendation": "Priorizar plano de melhoria do atendimento pós-venda antes do fechamento do ciclo.",
+    "updated": "2026-09-29",
+    "valueType": "points"
+  }
+];
+
