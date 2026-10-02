@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Painel demonstrativo para consulta e acompanhamento de indicadores estratégicos.">
+  <title>Bússola de Indicadores | Afya</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Bússola de Indicadores, início"><span class="brand-mark" aria-hidden="true">↗</span><span>Bússola<span class="brand-light"> de Indicadores</span></span></a>
+    <span class="demo-badge">Demonstração · dados fictícios</span>
+  </header>
+  <main id="conteudo" class="shell">
+    <section class="hero" id="inicio">
+      <div><p class="eyebrow">GESTÃO ESTRATÉGICA</p><h1>Encontre o norte dos seus resultados.</h1><p class="intro">Acompanhe os indicadores, entenda os desvios e registre os próximos passos.</p></div>
+      <div class="update-chip"><span class="pulse" aria-hidden="true"></span><span id="updatedAt">Dados da demonstração</span></div>
+    </section>
+    <section class="summary-grid" aria-label="Resumo dos indicadores">
+      <article class="summary-card"><span class="summary-label">Indicadores acompanhados</span><strong id="totalCount">—</strong><span class="summary-note">nesta demonstração</span></article>
+      <article class="summary-card"><span class="summary-label">Dentro da meta</span><strong id="greenCount">—</strong><span class="summary-note">farol verde</span></article>
+      <article class="summary-card"><span class="summary-label">Precisam de atenção</span><strong id="attentionCount">—</strong><span class="summary-note">amarelo ou vermelho</span></article>
+      <article class="summary-card focus-card"><span class="summary-label">Planos registrados</span><strong id="planCount">0</strong><span class="summary-note">salvos neste navegador</span></article>
+    </section>
+    <section class="workspace">
+      <div class="section-heading"><div><p class="eyebrow">VISÃO GERAL</p><h2>Seus indicadores</h2></div><label class="search-wrap"><span class="sr-only">Filtrar indicadores</span><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Buscar indicador..." autocomplete="off"></label></div>
+      <div id="indicatorGrid" class="indicator-grid" aria-live="polite"></div>
+    </section>
+    <section class="assistant-panel" aria-labelledby="assistantTitle">
+      <div class="assistant-intro"><span class="assistant-icon" aria-hidden="true">✳</span><div><p class="eyebrow">CONSULTA RÁPIDA</p><h2 id="assistantTitle">Pergunte à sua Bússola</h2><p>Respostas calculadas diretamente a partir dos indicadores desta página.</p></div></div>
+      <div class="suggestions" aria-label="Sugestões de pergunta"><button type="button" class="suggestion">Quais indicadores estão fora da meta?</button><button type="button" class="suggestion">Qual a meta da Receita Líquida?</button><button type="button" class="suggestion">Como está o NPS Pós-venda?</button></div>
+      <form id="questionForm" class="question-form"><label class="sr-only" for="question">Digite uma pergunta sobre os indicadores</label><input id="question" type="text" placeholder="Ex.: qual o desempenho do EBITDA Ajustado?" autocomplete="off"><button type="submit">Consultar <span aria-hidden="true">→</span></button></form>
+      <div id="answer" class="answer" role="status" aria-live="polite" hidden></div>
+    </section>
+    <section class="action-section" aria-labelledby="actionTitle">
+      <div class="section-heading"><div><p class="eyebrow">PRÓXIMO PASSO</p><h2 id="actionTitle">Registrar plano de ação</h2></div><p class="section-aside">Organize a resposta ao desvio.</p></div>
+      <form id="actionForm" class="action-form">
+        <label>Indicador<select id="actionIndicator" required></select></label>
+        <label>Responsável<input id="actionOwner" type="text" placeholder="Nome ou área" required></label>
+        <label class="action-description">Ação planejada<textarea id="actionText" rows="3" placeholder="Descreva o próximo passo" required></textarea></label>
+        <button type="submit" class="primary-button">Registrar plano</button>
+      </form>
+      <div class="plans-header"><h3>Planos neste navegador</h3><button id="exportPlans" class="text-button" type="button">Baixar registros</button></div>
+      <div id="plansList" class="plans-list"><p class="empty-state">Nenhum plano registrado ainda.</p></div>
+      <p class="local-note">Os planos ficam salvos somente neste navegador. Não são enviados para um servidor.</p>
+    </section>
+    <footer><span>Bússola de Indicadores · MVP demonstrativo</span><span>Consulte sempre a fonte oficial antes de tomar decisões.</span></footer>
+  </main>
+</body>
+</html>
+
